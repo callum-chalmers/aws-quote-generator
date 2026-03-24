@@ -39,17 +39,11 @@ The frontend calls a live AWS API which triggers a Python function to return a q
 
 
 | Layer | Service | Purpose |
-
 |---|---|---|
-
 | Frontend | Amazon S3 | Hosts the static HTML/CSS/JS webpage |
-
 | CDN | Amazon CloudFront | Global delivery and HTTPS |
-
 | API | Amazon API Gateway | Exposes the backend via a public URL |
-
 | Backend | AWS Lambda (Python) | Serverless function that returns a random quote |
-
 | Security | AWS IAM | Role-based access between services |
 
 
