@@ -1,4 +1,4 @@
-\# AWS Quote Generator
+# AWS Quote Generator
 
 
 
@@ -8,17 +8,17 @@ working towards AWS Solutions Architect certification.
 
 
 
-\## Live Demo
+## Live Demo
 
-\[View the live app](https://d2xf7y5ptg1op.cloudfront.net/)
-
-
-
-\---
+[View the live app](https://d2xf7y5ptg1op.cloudfront.net/)
 
 
 
-\## What It Does
+---
+
+
+
+## What It Does
 
 A simple web app that returns a random motivational quote at the click of a button. 
 
@@ -26,15 +26,15 @@ The frontend calls a live AWS API which triggers a Python function to return a q
 
 
 
-\---
+---
 
 
 
-\## Architecture
+## Architecture
 
 
 
-!\[Architecture Diagram](architecture.png)
+![Architecture Diagram](architecture.png)
 
 
 
@@ -54,15 +54,15 @@ The frontend calls a live AWS API which triggers a Python function to return a q
 
 
 
-\---
+---
 
 
 
-\## Architecture Decisions
+## Architecture Decisions
 
 
 
-\### Why Lambda over EC2?
+### Why Lambda over EC2?
 
 Lambda is serverless — there is no server to manage or keep running. 
 
@@ -74,7 +74,7 @@ EC2 would be over-engineered for this use case.
 
 
 
-\### Why S3 for the frontend?
+### Why S3 for the frontend?
 
 S3 static website hosting serves HTML files directly to browsers with no web server needed. 
 
@@ -84,7 +84,7 @@ at a fraction of the cost of running a dedicated web server.
 
 
 
-\### Why CloudFront?
+### Why CloudFront?
 
 CloudFront sits in front of S3 to provide three things: HTTPS, global edge caching for 
 
@@ -94,71 +94,71 @@ does not need to be publicly accessible.
 
 
 
-\---
+---
 
 
 
-\## Security Considerations
+## Security Considerations
 
-\- S3 bucket is \*\*not\*\* publicly accessible — all traffic routes through CloudFront only
+- S3 bucket is **not** publicly accessible — all traffic routes through CloudFront only
 
-\- Lambda function uses a least-privilege IAM role (no unnecessary permissions)
+- Lambda function uses a least-privilege IAM role (no unnecessary permissions)
 
-\- HTTPS enforced via CloudFront viewer protocol policy
+- HTTPS enforced via CloudFront viewer protocol policy
 
-\- CORS headers configured on the API to control which origins can call it
-
-
-
-\---
+- CORS headers configured on the API to control which origins can call it
 
 
 
-\## What I Learned
-
-\- How serverless compute works and when to use it over traditional servers
-
-\- The request/response cycle between frontend and backend via REST APIs
-
-\- How IAM roles control service-to-service permissions in AWS
-
-\- How CloudFront Edge Locations differ from AWS Regions
-
-\- Practical experience with the AWS Console across five core services
+---
 
 
 
-\---
+## What I Learned
+
+- How serverless compute works and when to use it over traditional servers
+
+- The request/response cycle between frontend and backend via REST APIs
+
+- How IAM roles control service-to-service permissions in AWS
+
+- How CloudFront Edge Locations differ from AWS Regions
+
+- Practical experience with the AWS Console across five core services
 
 
 
-\## What I Would Add in Production
-
-\- Authentication (Amazon Cognito) so users can have personal saved quotes
-
-\- A database (DynamoDB) to store and manage quotes dynamically
-
-\- Input validation and error handling on the Lambda function
-
-\- CloudWatch monitoring and alerting
-
-\- CI/CD pipeline to automate deployments (AWS CodePipeline)
+---
 
 
 
-\---
+## What I Would Add in Production
+
+- Authentication (Amazon Cognito) so users can have personal saved quotes
+
+- A database (DynamoDB) to store and manage quotes dynamically
+
+- Input validation and error handling on the Lambda function
+
+- CloudWatch monitoring and alerting
+
+- CI/CD pipeline to automate deployments (AWS CodePipeline)
 
 
 
-\## AWS Services Used
+---
+
+
+
+## AWS Services Used
 
 `Lambda` `API Gateway` `S3` `CloudFront` `IAM`
 
 
 
-\## Certifications Being Pursued
+## Certifications Being Pursued
 
-\- AWS Cloud Practitioner \*(in progress)\*
+- AWS Cloud Practitioner *(in progress)*
 
-\- AWS Solutions Architect Associate \*(planned)\*
+- AWS Solutions Architect Associate *(planned)*
 
