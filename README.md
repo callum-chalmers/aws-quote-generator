@@ -72,9 +72,7 @@ EC2 would be over-engineered for this use case.
 
 S3 static website hosting serves HTML files directly to browsers with no web server needed. 
 
-Combined with CloudFront it delivers the page globally with low latency and automatic HTTPS — 
-
-at a fraction of the cost of running a dedicated web server.
+Combined with CloudFront it delivers the page globally with low latency and automatic HTTPS — at a fraction of the cost of running a dedicated web server.
 
 
 
